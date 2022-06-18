@@ -1,0 +1,22 @@
+.list ul {
+    list-style-type: none;
+}
+
+.list li {
+    text-align: center;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.list li:last-of-type {
+    margin-bottom: 0;
+}
+
+.pending {
+    background: skyblue;
+}
+
+.done {
+    background: pink;
+}
