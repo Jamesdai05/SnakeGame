@@ -1,0 +1,39 @@
+body {
+    background-color:beige;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main {
+    background-color: #3e3e3e;
+    box-shadow: 0 1px 10px #3e3e3e;
+    text-align: center;
+    margin:15px 20px;
+}
+
+#score {
+    margin-bottom: 15px;
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+button {
+    margin-bottom: 10px;
+    height: 25px;
+    background-color: aqua;
+    border: none;
+    box-shadow:0 1px 5px aqua;
+    cursor: pointer;
+    color:#ffff
+}
+
+
