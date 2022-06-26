@@ -13,13 +13,13 @@ function drawGame() {
     
     drawSnake();
     clearnScreen();                     //ClearScreen when the game goes on;
-    setTimeout(drawGame, 1000);         // Pending for the game to be reload.
+    setTimeout(drawGame, 1000/speed);         // Pending for the game to be reload.
 
 }
 
 clearnScreen() {
     ctx.fillStyle ="black";
-    ctx.fillStyle(0,0,canvas.width,canvas.height);
+    ctx.fillRect(0,0,canvas.width,canvas.height);
 }
 
 drawSnake() {
