@@ -1,5 +1,6 @@
 body {
     background-color:beige;
+    text-align: center;
     justify-content: center;
     align-items: center;
 }
@@ -28,6 +29,7 @@ button:active {
 
 button {
     margin-bottom: 10px;
+    width: 60px;
     height: 25px;
     background-color: aqua;
     border: none;
