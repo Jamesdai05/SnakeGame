@@ -2,10 +2,10 @@ const canvas =document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
 let speed = 5;
-let gridCount = 25;
+let gridCount = 20;
 let gridSize = canvas.width/gridCount -2;
-let headX = 12;
-let headY = 12;
+let headX = 10;
+let headY = 10;
 
 
 
@@ -16,22 +16,28 @@ function drawGame() {
     setTimeout(drawGame, 1000/speed);         // Pending for the game to be reload.
 
 }
-
-clearnScreen() {
+// Refresh the screen window 
+function clearnScreen() {
     ctx.fillStyle ="black";
     ctx.fillRect(0,0,canvas.width,canvas.height);
-}
-
-drawSnake() {
-    ctx.fillStyle="yellow";
+};
+// drawSnake
+function drawSnake() {
+    ctx.fillStyle="red";
     ctx.fillRect(headX*gridCount, headY *gridCount,gridSize,gridSize);
 }
+
+
 
 document.addEventListener("keydown",keyDown);
 
 
-drawFood() {
-    ctx.fillStyle();
+// drawFood() {
+//     ctx.fillStyle();
+// }
+
+function keyDown() {
+
 }
 
 
