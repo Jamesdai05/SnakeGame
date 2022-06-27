@@ -32,6 +32,7 @@ function drawGame() {
     drawSnake();
     drawFood();
     snakeMovement();
+    foodEating();
     setTimeout(drawGame,1000/speed);
 }
 
@@ -107,5 +108,15 @@ function drawFood() {
     ctx.fillStyle ="blue";
     ctx.fillRect (foodX * boxCount, foodY * boxCount,boxSize,boxSize)
 }
+
+function foodEating(){
+    if(foodX === headX && foodY === headY) {
+        foodX = Math.floor(Math.random()* boxCount);
+        foodY = Math.floor(Math.random()* boxCount);
+        tail++;
+    }
+}
+
+
 
 drawGame();
