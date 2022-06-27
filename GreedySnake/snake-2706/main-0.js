@@ -10,12 +10,12 @@ let snakeBody =[];
 
 //velocity of the snake at the begin
 
-velocityOfX =0;
-velocityOfY =0;
+let velocityOfX =0;
+let velocityOfY =0;
 
 //food Initposition
-foodX = 3;
-foodY = 8;
+let foodX = 10;
+let foodY = 8;
 
 
 let tail = 2;
@@ -28,16 +28,16 @@ class SnakeBody {
 }
 
 function drawGame() {
-
-	clearScreen();
+	snakeMovement();
+	
 	let result = isGameOver();
 	if(result){
 		return;
 	};
-
+	clearScreen();
 	drawSnake();
 	drawFood();
-	snakeMovement();
+	
 	foodEating();
 	// decide the result of the game
 	
@@ -68,7 +68,7 @@ function drawSnake() {
 	}
 }
 
-document.body.addEventListener("keydown",directionControl);
+document.addEventListener("keydown",directionControl);
 // squence of the snake control direction: left:37 right:39 up:38 down:40 
 function directionControl(event) {
 	switch(event.keyCode) {
@@ -130,31 +130,29 @@ function isGameOver() {
   let gameOver = false;
 
   if (velocityOfX === 0 && velocityOfY === 0){
-		gameOver=false;
+		return gameOver=false;
   };
 
     // wall collision 
-  // if(headX < 0 || headX >= gridCount || headY < 0 || headY >= gridCount){
-  //     gameOver = true;
-  // };
-	if (headX < 0 || headX >= boxCount || headY<0 || headY >= boxCount){
+ 
+	if (headX < 0){
 		gameOver = true;
 	};
 
-    // hit the its own body also is considered as true
+   /*  // hit the its own body also is considered as true
 	for(let i=0;i< snakeBody.length; i++){
 		let body = snakeBody[i];
 		if(body.x === headX && body.y === headY) {
 			gameOver = true;
 			break;
 		};
-  };
+  }; */
 
-	if(gameOver) {
-		ctx.fillStyle ="white"
-		ctx.font = "50px Arial";
-		ctx.fillText("Game Over!", canvas.width/7,canvas.height/2);
-	}
+	// if(gameOver) {
+	// 	ctx.fillStyle ="white"
+	// 	ctx.font = "50px Arial";
+	// 	ctx.fillText("Game Over!", canvas.width/7,canvas.height/2);
+	// };
 	// while(i<snakeBody.length) {
 	// 	let i=0;
 	// 	let body = snakeBody[i];
