@@ -1,9 +1,12 @@
-const canvas =document.getElementById("game");
+const canvas =document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
-let speed = 5;
-let gridCount = 20;
-let gridSize = canvas.width/gridCount -1;
+ctx.fillStyle ="red";
+ctx.fillRect=(10,10,200,200)
+
+/* let speed = 5;
+let boxCount = 20;
+let boxSize = canvas.width/gridCount -1;
 let headX = 1;
 let headY = 1;
 
@@ -12,8 +15,6 @@ let foodY = 5;
 
 let velocityOfX = 0;
 let velocityOfY = 0;
-
-
 
 
 function drawGame() {
@@ -33,9 +34,9 @@ function cleanScreen() {
 // drawSnake
 function drawSnake() {
     ctx.fillStyle ="red";
-    ctx.fillRect(headX * gridCount, headY * gridCount,gridSize,gridSize);
+    ctx.fillRect(headX * boxCount, headY * boxCount,boxSize,boxSize);
 }
-// snake movement
+/* // snake movement
 document.addEventListener("keydown",directionControl);
 function directionControl(event){
     //left = 37 right = 39 up = 38 down = 40 (keycode)  
@@ -82,8 +83,9 @@ function directionControl(event){
 // function drawFood() {
 //     ctx.fillStyle = "blue";
 //     ctx.fillRect(foodX)
-// }
+// } */
 
 
 
-drawGame();
+// drawGame();
+

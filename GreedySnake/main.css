@@ -1,25 +1,26 @@
 body {
-    background-color:beige;
-    text-align: center;
+    /* background-color:beige; */
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
-.container{
+/* .container{
     display:flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
-}
+} */
 
-.main {
-    background-color: #3e3e3e;
-    box-shadow: 0 1px 10px #3e3e3e;
-    text-align: center;
+canvas {
+    box-shadow: 0 5px 15px black;
     margin:15px 20px;
 }
 
-#score {
+/* #score {
     margin-bottom: 15px;
 }
 
@@ -36,6 +37,6 @@ button {
     box-shadow:0 1px 5px aqua;
     cursor: pointer;
     color:#ffff
-}
+} */
 
 
