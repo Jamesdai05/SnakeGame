@@ -130,7 +130,7 @@ function isGameOver() {
   let gameOver = false;
 
   if (velocityOfX === 0 && velocityOfY === 0){
-      false;
+		gameOver=false;
   };
 
     // wall collision 
@@ -145,10 +145,16 @@ function isGameOver() {
 	for(let i=0;i< snakeBody.length; i++){
 		let body = snakeBody[i];
 		if(body.x === headX && body.y === headY) {
-			gameover = true;
+			gameOver = true;
 			break;
 		};
   };
+
+	if(gameOver) {
+		ctx.fillStyle ="white"
+		ctx.font = "50px Arial";
+		ctx.fillText("Game Over!", canvas.width/7,canvas.height/2);
+	}
 	// while(i<snakeBody.length) {
 	// 	let i=0;
 	// 	let body = snakeBody[i];
