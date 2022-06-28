@@ -39,11 +39,10 @@ function drawGame() {
 	drawFood();
 	
 	foodEating();
-	// decide the result of the game
-	
+	// decide the result of the game	
 
 	setTimeout(drawGame,1000/speed);
-}
+};
 
 function clearScreen() {
 	ctx.fillStyle = "black";
@@ -126,42 +125,34 @@ function foodEating(){
 }
 
 function isGameOver() {
+
     // default that the game should be going on
-  let gameOver = false;
-
-  if (velocityOfX === 0 && velocityOfY === 0){
-		return gameOver=false;
-  };
-
-    // wall collision 
- 
-	if (headX < 0){
+	let gameOver = false;
+	if(velocityOfX ===0 && velocityOfY === 0) {
+		return gameOver= false;
+	};
+	// hit the wall/boundary
+	if(headX <0 || headX >= boxCount || headY <0 || headY >= boxCount){
 		gameOver = true;
 	};
+  
 
-   /*  // hit the its own body also is considered as true
+    // hit the its own body also is considered as true
 	for(let i=0;i< snakeBody.length; i++){
 		let body = snakeBody[i];
 		if(body.x === headX && body.y === headY) {
 			gameOver = true;
 			break;
 		};
-  }; */
+    };
 
-	// if(gameOver) {
-	// 	ctx.fillStyle ="white"
-	// 	ctx.font = "50px Arial";
-	// 	ctx.fillText("Game Over!", canvas.width/7,canvas.height/2);
-	// };
-	// while(i<snakeBody.length) {
-	// 	let i=0;
-	// 	let body = snakeBody[i];
-	// 	i++;
-	// 	if(body.x === headX && body.y === headY) {
-	// 		gameOver = true;
-	// 		break;
-	// 	}
-	// }
+	if(gameOver) {
+		ctx.fillStyle ="white"
+		ctx.font = "50px Arial";
+		ctx.fillText("Game Over!", canvas.width/7,canvas.height/2);
+	};
+	
+	
 	return gameOver;
 }
 
