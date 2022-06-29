@@ -45,11 +45,11 @@ function drawGame() {
 	setTimeout(drawGame,1000/speed);
 };
 
-function drawScore() {
-	ctx.fillStyle ="orange";
-	ctx.fillStyle ="30px Arial";	
-	ctx.fillText("score: "+ score, canvas.width-50,10);
-}
+// function drawScore() {
+// 	ctx.fillStyle ="orange";
+// 	ctx.fillStyle ="30px Arial";	
+// 	ctx.fillText("score: "+ score, canvas.width-50,10);
+// }
 
 function clearScreen() {
 	ctx.fillStyle = "rgb(55,150,125)";
@@ -61,7 +61,7 @@ function drawSnake() {
 	ctx.fillStyle ="red";
 	ctx.fillRect(headX * boxCount, headY * boxCount,boxSize, boxSize);
 
-	ctx.fillStyle ="green";
+	ctx.fillStyle ="orange";
 	for(let i =0; i<snakeBody.length; i++){
 			let body = snakeBody[i];
 			ctx.fillRect(body.x * boxCount, body.y * boxCount, boxSize,boxSize);
@@ -131,6 +131,12 @@ function foodEating(){
 			score ++;
 			// hittingSound.play()
 	}
+}
+
+function drawScore() {
+	ctx.fillStyle ="orange";
+	ctx.fillStyle ="30px Arial";	
+	ctx.fillText("score: "+ score, canvas.width-50,10);
 }
 
 function isGameOver() {
