@@ -21,7 +21,7 @@ let score = 0;
 
 let tail = 2;
 
-const hittingSound = new Audio("./soundEffect.wav")
+const hittingSound = new Audio("./soundeffect.wav")
 
 class SnakeBody {
 	constructor(x,y) {
@@ -44,12 +44,6 @@ function drawGame() {
 	drawScore();
 	setTimeout(drawGame,1000/speed);
 };
-
-// function drawScore() {
-// 	ctx.fillStyle ="orange";
-// 	ctx.fillStyle ="30px Arial";	
-// 	ctx.fillText("score: "+ score, canvas.width-50,10);
-// }
 
 function clearScreen() {
 	ctx.fillStyle = "rgb(55,150,125)";
@@ -129,7 +123,7 @@ function foodEating(){
 			foodY = Math.floor(Math.random()* boxCount);
 			tail++;
 			score ++;
-			// hittingSound.play()
+			hittingSound.play();
 	}
 }
 
