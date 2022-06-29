@@ -35,6 +35,7 @@ function drawGame() {
 	// decide the result of the game	
 	let result = isGameOver();
 	if(result){
+		hittingSound.play();
 		return;
 	};
 	clearScreen();
