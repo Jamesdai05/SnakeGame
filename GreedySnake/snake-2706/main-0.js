@@ -2,8 +2,8 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
 let speed = 5;
-let boxCount =20;
-let boxSize = canvas.width / boxCount -1;
+let boxCount = 20;
+let boxSize = canvas.width / boxCount - 1;
 let headX = 1;
 let headY = 1;
 let snakeBody =[];
@@ -16,9 +16,12 @@ let velocityOfY =0;
 //food Initposition
 let foodX = 10;
 let foodY = 8;
-
+//set score to be 0 at initialization state.
+let score = 0;
 
 let tail = 2;
+
+const hittingSound = new Audio("./soundEffect.wav")
 
 class SnakeBody {
 	constructor(x,y) {
@@ -29,23 +32,27 @@ class SnakeBody {
 
 function drawGame() {
 	snakeMovement();
-	
+	// decide the result of the game	
 	let result = isGameOver();
 	if(result){
 		return;
 	};
 	clearScreen();
 	drawSnake();
-	drawFood();
-	
+	drawFood();	
 	foodEating();
-	// decide the result of the game	
-
+	drawScore();
 	setTimeout(drawGame,1000/speed);
 };
 
+function drawScore() {
+	ctx.fillStyle ="orange";
+	ctx.fillStyle ="30px Arial";	
+	ctx.fillText("score: "+ score, canvas.width-50,10);
+}
+
 function clearScreen() {
-	ctx.fillStyle = "black";
+	ctx.fillStyle = "rgb(55,150,125)";
 	ctx.fillRect(0,0,canvas.width,canvas.height);
 }
 
@@ -121,6 +128,8 @@ function foodEating(){
 			foodX = Math.floor(Math.random()* boxCount);
 			foodY = Math.floor(Math.random()* boxCount);
 			tail++;
+			score ++;
+			// hittingSound.play()
 	}
 }
 
@@ -145,7 +154,7 @@ function isGameOver() {
 			break;
 		};
     };
-
+	// Alert the user with message.
 	if(gameOver) {
 		ctx.fillStyle ="white"
 		ctx.font = "50px Arial";
