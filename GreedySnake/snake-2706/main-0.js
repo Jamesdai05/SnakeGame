@@ -16,7 +16,7 @@ let velocityOfY =0;
 //food Initposition
 let foodX = 10;
 let foodY = 8;
-//set score to be 0 at initialization state.
+//set score to be 0 at initialization.
 let score = 0;
 
 let tail = 2;
@@ -35,7 +35,7 @@ function drawGame() {
 	// decide the result of the game	
 	let result = isGameOver();
 	if(result){
-		hittingSound.play();
+		
 		return;
 	};
 	clearScreen();
