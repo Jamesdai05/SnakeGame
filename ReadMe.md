@@ -29,7 +29,6 @@ The challege is I need to pick up the HTML Canvas features within a short period
 ## GameLink
 
 The gamelink : <https://jamesdai05.github.io/SnakeGame/index.html>
-GitHub Page: 
 
 ## Installation instructions
 
