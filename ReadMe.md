@@ -41,6 +41,8 @@ The game is just a web-game and no installation is required
 
 - Browser responsive design
 
+- Button interface(button to reset the game and button to pause the game)
+
 ## Items to be improved
 
 - User Interface of the game , pause, restart buttons can be added.
