@@ -5,7 +5,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: beige;
+    /* background-color: beige; */
+    background-image: url("./4.jpg");
+    background-image: cover;
+    background-image: no-repeat;
+    background-size: auto;
 }
 
 canvas {
@@ -13,7 +17,14 @@ canvas {
     margin-bottom: 15px;
 }
 
-h2,p {
+h1{
     text-align: center;
     margin-top: 1.5em;
+    color: darkblue;
+}
+
+p {
+    text-align: center;
+    margin-top: 1.5em;
+    color: black;
 }

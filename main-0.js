@@ -160,14 +160,12 @@ function isGameOver() {
 			break;
 		};
     };
-	// Alert the user with message.
+	// Alert game-user with message.
 	if(gameOver) {
 		ctx.fillStyle ="white"
 		ctx.font = "50px Arial";
 		ctx.fillText("Game Over!", canvas.width/7,canvas.height/2);
-	};
-	
-	
+	};	
 	return gameOver;
 }
 
