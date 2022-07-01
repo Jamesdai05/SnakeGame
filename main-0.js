@@ -3,7 +3,7 @@ const ctx = canvas.getContext("2d");
 
 let speed = 5;
 let boxCount = 20;
-let boxSize = canvas.width / boxCount - 1;
+let boxSize = canvas.width / boxCount;
 let headX = 1;
 let headY = 1;
 let snakeBody =[];
@@ -19,10 +19,10 @@ let foodY = 8;
 //set score to be 0 at initialization.
 let score = 0;
 
-let tail = 2;
+let tail = 3;
 
 const hittingSound = new Audio("./soundeffect.wav")
-
+//constructor function for the snakebody
 class SnakeBody {
 	constructor(x,y) {
 			this.x = x;
@@ -35,7 +35,7 @@ function drawGame() {
 	// decide the result of the game	
 	let result = isGameOver();
 	if(result){
-		
+		hittingSound.play();	
 		return;
 	};
 	clearScreen();
@@ -54,13 +54,18 @@ function clearScreen() {
 function drawSnake() {
 	// draw the snake head
 	ctx.fillStyle ="red";
-	ctx.fillRect(headX * boxCount, headY * boxCount,boxSize, boxSize);
+	ctx.strokeStyle="black";
+	ctx.fillRect(headX * boxSize, headY * boxSize,boxSize, boxSize);
+	ctx.strokeRect(headX * boxSize, headY * boxSize,boxSize, boxSize);
 
 	ctx.fillStyle ="orange";
+	ctx.strokeStyle = "black";
 	for(let i =0; i<snakeBody.length; i++){
 			let body = snakeBody[i];
-			ctx.fillRect(body.x * boxCount, body.y * boxCount, boxSize,boxSize);
+			ctx.fillRect(body.x * boxSize, body.y * boxSize, boxSize,boxSize);
+			ctx.strokeRect(body.x * boxSize, body.y * boxSize, boxSize,boxSize);
 	}
+
 	// put the new item to the position of the head
 	snakeBody.push(new SnakeBody(headX,headY)) 
 
@@ -115,7 +120,7 @@ function snakeMovement() {
 
 function drawFood() {
 	ctx.fillStyle ="blue";
-	ctx.fillRect (foodX * boxCount, foodY * boxCount,boxSize,boxSize)
+	ctx.fillRect (foodX * boxSize, foodY * boxSize,boxSize,boxSize)
 }
 
 function foodEating(){

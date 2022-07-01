@@ -20,7 +20,7 @@ canvas {
     margin:15px 20px;
 }
 
-/* #score {
+#score {
     margin-bottom: 15px;
 }
 
@@ -37,6 +37,6 @@ button {
     box-shadow:0 1px 5px aqua;
     cursor: pointer;
     color:#ffff
-} */
+}
 
 
