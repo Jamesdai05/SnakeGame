@@ -48,3 +48,5 @@ The game is just a web-game and no installation is required
 - User Interface of the game , pause, restart buttons can be added.
 
 - This game is only can be controlled with Arrow Key buttons, it can be improved if the game can be controlled by ASWD keys.
+
+- Game background music can be added if there is a suitable one.
