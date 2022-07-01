@@ -2,11 +2,11 @@
 
 ## Technology
 
-HTML canvas
+HTML Canvas
 
 ## Challage
 
-The challege is that I need to pick up the HTML Canvas features within a short period and to make the game works
+The challege is I need to pick up the HTML Canvas features within a short period and to make the game works
 
 ## The approach
 
@@ -29,6 +29,7 @@ The challege is that I need to pick up the HTML Canvas features within a short p
 ## GameLink
 
 The gamelink : <https://jamesdai05.github.io/SnakeGame/index.html>
+GitHub Page: 
 
 ## Installation instructions
 

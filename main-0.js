@@ -21,7 +21,8 @@ let score = 0;
 
 let tail = 3;
 
-const hittingSound = new Audio("./soundeffect.wav")
+const hittingSound = new Audio("./soundeffect.wav");
+const gameOverSound = new Audio("./gameover.wav");
 //constructor function for the snakebody
 class SnakeBody {
 	constructor(x,y) {
@@ -35,7 +36,7 @@ function drawGame() {
 	// decide the result of the game	
 	let result = isGameOver();
 	if(result){
-		hittingSound.play();	
+		gameOverSound.play();	
 		return;
 	};
 	clearScreen();
