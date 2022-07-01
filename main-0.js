@@ -134,9 +134,9 @@ function foodEating(){
 }
 
 function drawScore() {
-	ctx.fillStyle ="orange";
-	ctx.fillStyle ="30px Arial";	
-	ctx.fillText("score: "+ score, canvas.width-50,10);
+	ctx.fillStyle ="yellow";
+	ctx.fillStyle ="35px Arial";	
+	ctx.fillText("score: "+ score, canvas.width-50,15);
 }
 
 function isGameOver() {
