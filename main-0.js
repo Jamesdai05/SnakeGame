@@ -45,7 +45,7 @@ function drawGame() {
 	drawScore();
 	setTimeout(drawGame,1000/speed);
 };
-
+// refresh the screen 
 function clearScreen() {
 	ctx.fillStyle = "rgb(55,150,125)";
 	ctx.fillRect(0,0,canvas.width,canvas.height);
@@ -66,7 +66,7 @@ function drawSnake() {
 			ctx.strokeRect(body.x * boxSize, body.y * boxSize, boxSize,boxSize);
 	}
 
-	// put the new item to the position of the head
+	// put the new item to the position next to the head
 	snakeBody.push(new SnakeBody(headX,headY)) 
 
 	if(snakeBody.length > tail){

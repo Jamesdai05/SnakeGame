@@ -1,42 +1,27 @@
 body {
     /* background-color:beige; */
     display: flex;
+    text-align: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     
 }
 
-/* .container{
+.container{
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
-} */
+}
 
 canvas {
     box-shadow: 0 5px 15px black;
     margin:15px 20px;
-}
+    justify-content: center;
+    align-items: center;
 
-#score {
-    margin-bottom: 15px;
-}
-
-button:active {
-    transform: scale(0.9);
-}
-
-button {
-    margin-bottom: 10px;
-    width: 60px;
-    height: 25px;
-    background-color: aqua;
-    border: none;
-    box-shadow:0 1px 5px aqua;
-    cursor: pointer;
-    color:#ffff
 }
 
 
