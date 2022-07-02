@@ -2,15 +2,15 @@
 
 ## Technology
 
-- HTML Canvas
+- HTML Canvas, Collision detection, Vector Caculation
 
-- Javascript 
+- Javascript
 
 - CSS
 
 ## Challage
 
-The challege is I need to pick up the HTML Canvas features within a short period and to make the game works
+The challege is to pick up the HTML Canvas features within a short period and to make the game works
 
 ## The approach
 
@@ -44,12 +44,12 @@ The game is just a web-game and no installation is required
 
 - Browser responsive design
 
-- Button interface(button to reset the game and button to pause the game)
+- User interface(button to reset the game and button to pause the game)
 
 ## Items to be improved
 
 - User Interface of the game , pause, restart buttons can be added.
 
-- This game is only can be controlled with Arrow Key buttons, it can be improved if the game can be controlled by ASWD keys.
+- This game is only can be controlled with Arrow Key buttons, it can be futher improved if the game can be controlled by ASWD keys.
 
 - Game background music can be added if there is a suitable one.
