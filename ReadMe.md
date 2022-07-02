@@ -2,7 +2,11 @@
 
 ## Technology
 
-HTML Canvas
+- HTML Canvas
+
+- Javascript 
+
+- CSS
 
 ## Challage
 
